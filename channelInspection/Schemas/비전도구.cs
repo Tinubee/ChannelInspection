@@ -90,8 +90,8 @@ namespace channelInspection.Schemas
         public Flow구분 구분;
         public Boolean 결과;
         public Boolean 결과업데이트완료;
-        public String 로그영역 { get => $"비전도구({구분})"; }
-        public String PLC결과주소;
+        public String PLC결과주소OK;
+        public String PLC결과주소NG;
 
         public VmProcedure Procedure;
         public ImageSourceModuleTool imageSourceModuleTool;
@@ -110,8 +110,6 @@ namespace channelInspection.Schemas
             }
             this.결과 = false;
             this.결과업데이트완료 = false;
-            if (plcAddress != string.Empty)
-                this.PLC결과주소 = plcAddress;
         }
         private void ShellModuleTool_ModuleResultCallBackArrived(object sender, EventArgs e) { }
 
@@ -120,7 +118,6 @@ namespace channelInspection.Schemas
             this.Procedure = VmSolution.Instance[this.구분.ToString()] as VmProcedure;
             if (Procedure != null)
             {
-                //Debug.WriteLine($"{this.구분} Init");
                 this.imageSourceModuleTool = this.Procedure["InputImage"] as ImageSourceModuleTool;
                 this.graphicsSetModuleTool = this.Procedure["OutPutImage"] as GraphicsSetModuleTool;
                 this.shellModuleTool = this.Procedure["결과"] as ShellModuleTool;
@@ -129,34 +126,6 @@ namespace channelInspection.Schemas
                     this.imageSourceModuleTool.ModuParams.ImageSourceType = ImageSourceParam.ImageSourceTypeEnum.SDK;
             }
         }
-
-        //private void SetResult(Flow구분 구분)
-        //{
-        //    ShellModuleTool shell = Global.비전도구.GetItem(구분).shellModuleTool;
-        //    for (int i = 6; i < shell.Outputs.Count; i++)
-        //    {
-        //        List<VmIO> t = shell.Outputs[i].GetAllIO();
-        //        String name = t[0].UniqueName.Split('%')[1];
-        //        if (t[0].Value != null)
-        //        {
-        //            String str = ((ImvsSdkDefine.IMVS_MODULE_STRING_VALUE_EX[])t[0].Value)[0].strValue;
-        //            //Debug.WriteLine(str, name);
-        //            try
-        //            {
-        //                String[] vals = str.Split(';');
-        //                Boolean ok = false;
-        //                Single val = Single.NaN;
-        //                if (!String.IsNullOrEmpty(vals[0])) val = Convert.ToSingle(vals[0]);
-        //                if (vals.Length > 1) ok = MvUtils.Utils.IntValue(vals[1]) == 1;
-        //                Global.검사자료.카메라검사((카메라구분)구분, name, val, ok);
-        //            }
-        //            catch (Exception e)
-        //            {
-        //                Debug.WriteLine(e.Message, name);
-        //            }
-        //        }
-        //    }
-        //}
 
         public Boolean Run(Mat mat)
         {
@@ -172,8 +141,12 @@ namespace channelInspection.Schemas
                 this.imageSourceModuleTool.SetImageData(MatToImageBaseData(mat));
                 this.Procedure.Run();
                 // this.SetResult(구분);
-                String resultString = this.shellModuleTool == null ? "NG" : ((ImvsSdkDefine.IMVS_MODULE_STRING_VALUE_EX[])this.shellModuleTool.Outputs[6].Value)[0].strValue;
-                this.결과 = resultString == "OK" ? true : false;
+                if ((ImvsSdkDefine.IMVS_MODULE_STRING_VALUE_EX[])this.shellModuleTool.Outputs[6].Value != null)
+                {
+                    String resultString = this.shellModuleTool == null ? "NG" : ((ImvsSdkDefine.IMVS_MODULE_STRING_VALUE_EX[])this.shellModuleTool.Outputs[6].Value)[0].strValue;
+                    this.결과 = resultString == "OK" ? true : false;
+                }
+
 
                 //PLC에 검사결과 전송부분 추가해야됨.
 
