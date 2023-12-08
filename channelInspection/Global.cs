@@ -19,7 +19,7 @@ namespace channelInspection
     }
     public static class Global
     {
-        public static MainForm MainForm = null;
+        //public static MainForm MainForm = null;
         public delegate void BaseEvent();
         public static event EventHandler<Boolean> Initialized;
 

@@ -96,6 +96,7 @@ namespace channelInspection.Schemas
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex);
                 //Global.오류로그(로그영역.GetString(), "데이터베이스 연결실패", ex.Message, true);
             }
             return can;
@@ -149,6 +150,7 @@ namespace channelInspection.Schemas
                 }
                 catch (Exception ex)
                 {
+                    Debug.WriteLine(ex);
                     //Global.오류로그(로그영역.GetString(), "환경설정 로드 실패", ex.Message, true);
                 }
             }

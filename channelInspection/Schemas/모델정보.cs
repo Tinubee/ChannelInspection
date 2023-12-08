@@ -83,7 +83,8 @@ namespace channelInspection.Schemas
             }
             catch (Exception ex)
             {
-               // Global.오류로그(로그영역.GetString(), "자료로드", ex.Message, false);
+                Debug.WriteLine(ex);
+                // Global.오류로그(로그영역.GetString(), "자료로드", ex.Message, false);
             }
 
             if (this.GetItem(Global.환경설정.선택모델) == null)

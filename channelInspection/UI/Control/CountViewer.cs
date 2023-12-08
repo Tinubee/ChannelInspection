@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class CountViewer : MetroFramework.Controls.MetroUserControl
+    public partial class CountViewer : UserControl
     {
         public CountViewer()
         {

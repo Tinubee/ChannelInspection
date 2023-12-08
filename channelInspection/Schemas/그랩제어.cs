@@ -253,6 +253,7 @@ namespace channelInspection.Schemas
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex);
                 //Global.오류로그(로그영역, "초기화", $"초기화 오류: {ex.Message}", true);
                 this.상태 = false;
             }
@@ -338,6 +339,7 @@ namespace channelInspection.Schemas
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex);
                 //Global.오류로그(로그영역, "Camera Call Back Error", $"[{this.구분}] {ex.Message}", false);
                 return;
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using channelInspection.UI.Form;
+using System;
 using System.Threading;
 using System.Windows.Forms;
 

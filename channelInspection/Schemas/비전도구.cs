@@ -154,6 +154,7 @@ namespace channelInspection.Schemas
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex);
                 //Global.오류로그(로그영역, "검사오류", $"[{구분}] VM 검사오류: {ex.Message}", false);
                 return false;
             }

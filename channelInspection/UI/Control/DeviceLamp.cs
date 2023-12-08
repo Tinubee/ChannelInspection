@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class DeviceLamp : MetroFramework.Controls.MetroUserControl
+    public partial class DeviceLamp : UserControl
     {
         public DeviceLamp()
         {

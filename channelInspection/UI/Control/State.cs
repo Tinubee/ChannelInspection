@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class State : MetroFramework.Controls.MetroUserControl
+    public partial class State : UserControl
     {
         public State()
         {

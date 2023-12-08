@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class CamSetting : MetroFramework.Controls.MetroUserControl
+    public partial class CamSetting : UserControl
     {
         public CamSetting()
         {

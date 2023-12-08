@@ -8,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MetroFramework.Forms;
 using VM.Controls;
 using System.Windows;
 
@@ -16,7 +15,6 @@ namespace channelInspection.Utils
 {
     public class Util
     {
-
         public static Boolean WriteAllText(String file, String text)
         {
             try

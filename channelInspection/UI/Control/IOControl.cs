@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class IOControl : MetroFramework.Controls.MetroUserControl
+    public partial class IOControl : UserControl
     {
         public IOControl()
         {

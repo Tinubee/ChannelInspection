@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Form
 {
-    public partial class Teaching : MetroFramework.Forms.MetroForm
+    public partial class Teaching : System.Windows.Forms.Form
     {
         public Teaching()
         {

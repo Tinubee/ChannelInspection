@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // DeviceSetting
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "DeviceSetting";
-            this.Size = new System.Drawing.Size(889, 685);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

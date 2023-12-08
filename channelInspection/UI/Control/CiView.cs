@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class CiView : MetroFramework.Controls.MetroUserControl
+    public partial class CiView : UserControl
     {
         public CiView()
         {

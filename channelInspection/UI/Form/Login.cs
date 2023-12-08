@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Form
 {
-    public partial class Login : MetroFramework.Forms.MetroForm
+    public partial class Login : System.Windows.Forms.Form
     {
         public Login()
         {

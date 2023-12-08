@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Form
 {
-    public partial class WaitForm : MetroFramework.Forms.MetroForm
+    public partial class WaitForm : System.Windows.Forms.Form
     {
         public WaitForm()
         {
