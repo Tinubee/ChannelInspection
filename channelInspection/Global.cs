@@ -1,4 +1,5 @@
 ﻿using channelInspection.Schemas;
+using channelInspection.UI.Form;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,7 +20,7 @@ namespace channelInspection
     }
     public static class Global
     {
-        //public static MainForm MainForm = null;
+        public static MainForm MainForm = null;
         public delegate void BaseEvent();
         public static event EventHandler<Boolean> Initialized;
 
@@ -75,7 +76,7 @@ namespace channelInspection
             {
                 그랩제어?.Close();
                 //조명제어?.Close();
-                //환경설정?.Close();
+                환경설정?.Close();
                 return true;
             }
             catch (Exception ex)
