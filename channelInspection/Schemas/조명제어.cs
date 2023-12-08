@@ -8,5 +8,6 @@ namespace channelInspection.Schemas
 {
     public class 조명제어
     {
+
     }
 }
