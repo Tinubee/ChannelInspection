@@ -56,9 +56,10 @@ namespace channelInspection
 
                 //그랩제어.Init();
                 환경설정.Init();
-                모델자료.Init();
-                비전도구.Init();
+                //모델자료.Init();
+                //비전도구.Init();
                 //신호제어.Init();
+                Initialized.Invoke(null, true);
                 return true;
             }
             catch (Exception ex)

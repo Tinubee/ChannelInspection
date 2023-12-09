@@ -34,14 +34,15 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.e환경설정 = new channelInspection.UI.Control.Config();
             this.topBar1 = new channelInspection.UI.Control.TopBar();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.config1 = new channelInspection.UI.Control.Config();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.camSetting1 = new channelInspection.UI.Control.CamSetting();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -129,54 +130,15 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "환경설정";
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage4.Location = new System.Drawing.Point(4, 4);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1906, 877);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "도구설정";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage5.Location = new System.Drawing.Point(4, 4);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1906, 877);
-            this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "변수설정";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage6.Location = new System.Drawing.Point(4, 26);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1914, 907);
-            this.tabPage6.TabIndex = 2;
-            this.tabPage6.Text = "로그";
-            // 
-            // topBar1
-            // 
-            this.topBar1.BackColor = System.Drawing.Color.DimGray;
-            this.topBar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topBar1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.topBar1.Location = new System.Drawing.Point(0, 0);
-            this.topBar1.Margin = new System.Windows.Forms.Padding(0);
-            this.topBar1.Name = "topBar1";
-            this.topBar1.Size = new System.Drawing.Size(1924, 40);
-            this.topBar1.TabIndex = 0;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.config1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.e환경설정, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.camSetting1, 0, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -189,16 +151,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1906, 877);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // config1
+            // label2
             // 
-            this.config1.BackColor = System.Drawing.Color.DimGray;
-            this.config1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.config1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.config1.Location = new System.Drawing.Point(1, 28);
-            this.config1.Margin = new System.Windows.Forms.Padding(0);
-            this.config1.Name = "config1";
-            this.config1.Size = new System.Drawing.Size(1904, 409);
-            this.config1.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Info;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(1, 438);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1904, 26);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Camera Setting";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -214,19 +179,65 @@
             this.label1.Text = "Config Setting";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // tabPage4
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Info;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(1, 438);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1904, 26);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Camera Setting";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabPage4.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1906, 881);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "도구설정";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1906, 881);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "변수설정";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage6.Location = new System.Drawing.Point(4, 26);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1914, 907);
+            this.tabPage6.TabIndex = 2;
+            this.tabPage6.Text = "로그";
+            // 
+            // e환경설정
+            // 
+            this.e환경설정.BackColor = System.Drawing.Color.DimGray;
+            this.e환경설정.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.e환경설정.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.e환경설정.Location = new System.Drawing.Point(1, 28);
+            this.e환경설정.Margin = new System.Windows.Forms.Padding(0);
+            this.e환경설정.Name = "e환경설정";
+            this.e환경설정.Size = new System.Drawing.Size(1904, 409);
+            this.e환경설정.TabIndex = 3;
+            // 
+            // topBar1
+            // 
+            this.topBar1.BackColor = System.Drawing.Color.DimGray;
+            this.topBar1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topBar1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.topBar1.Location = new System.Drawing.Point(0, 0);
+            this.topBar1.Margin = new System.Windows.Forms.Padding(0);
+            this.topBar1.Name = "topBar1";
+            this.topBar1.Size = new System.Drawing.Size(1924, 40);
+            this.topBar1.TabIndex = 0;
+            // 
+            // camSetting1
+            // 
+            this.camSetting1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.camSetting1.Location = new System.Drawing.Point(1, 465);
+            this.camSetting1.Margin = new System.Windows.Forms.Padding(0);
+            this.camSetting1.Name = "camSetting1";
+            this.camSetting1.Size = new System.Drawing.Size(1904, 411);
+            this.camSetting1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -268,7 +279,8 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
-        private Control.Config config1;
         private System.Windows.Forms.Label label1;
+        private Control.Config e환경설정;
+        private Control.CamSetting camSetting1;
     }
 }

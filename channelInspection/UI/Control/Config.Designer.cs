@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.b이미지저장경로선택 = new System.Windows.Forms.Button();
             this.tb데이터저장경로 = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@
             this.d기본경로 = new System.Windows.Forms.FolderBrowserDialog();
             this.d데이터저장 = new System.Windows.Forms.FolderBrowserDialog();
             this.d이미지저장 = new System.Windows.Forms.FolderBrowserDialog();
+            this.bind환경설정 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.n검사자료보관일)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n로그보관일)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n검사결과자릿수)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bind환경설정)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -497,6 +500,10 @@
             this.b설정저장.TabIndex = 4;
             this.b설정저장.UseVisualStyleBackColor = false;
             // 
+            // bind환경설정
+            // 
+            this.bind환경설정.DataSource = typeof(channelInspection.Schemas.환경설정);
+            // 
             // Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -522,6 +529,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.n검사자료보관일)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n로그보관일)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n검사결과자릿수)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bind환경설정)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -560,5 +568,6 @@
         private System.Windows.Forms.FolderBrowserDialog d기본경로;
         private System.Windows.Forms.FolderBrowserDialog d데이터저장;
         private System.Windows.Forms.FolderBrowserDialog d이미지저장;
+        private System.Windows.Forms.BindingSource bind환경설정;
     }
 }

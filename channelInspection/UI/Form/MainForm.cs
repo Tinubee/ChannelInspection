@@ -23,6 +23,7 @@ namespace channelInspection.UI.Form
         }
         private Boolean Init()
         {
+            e환경설정.Init();
             //뷰어들 추가되면 초기화 시켜주면됨.
             return true;
         }
@@ -67,11 +68,6 @@ namespace channelInspection.UI.Form
                 //login.Show();
             }
             else this.Close();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

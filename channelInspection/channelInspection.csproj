@@ -233,12 +233,6 @@
     <Compile Include="UI\Control\DeviceLamp.Designer.cs">
       <DependentUpon>DeviceLamp.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Control\DeviceSetting.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Control\DeviceSetting.Designer.cs">
-      <DependentUpon>DeviceSetting.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Control\IOControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +295,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Control\CamSetting.resx">
+      <DependentUpon>CamSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,6 +316,8 @@
     <EmbeddedResource Include="UI\Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="channelInspection.Schemas.카메라장치.datasource" />
+    <None Include="channelInspection.Schemas.환경설정.datasource" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
