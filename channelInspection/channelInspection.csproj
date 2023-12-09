@@ -301,6 +301,9 @@
     <EmbeddedResource Include="UI\Control\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Control\CountViewer.resx">
+      <DependentUpon>CountViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\DeviceLamp.resx">
       <DependentUpon>DeviceLamp.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,8 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // CountViewer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.Name = "CountViewer";
+            this.Size = new System.Drawing.Size(682, 130);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -18,7 +18,7 @@ namespace channelInspection.UI.Control
             InitializeComponent();
         }
 
-        private 장치상태 장치통신;
+        //private 장치상태 장치통신;
         private 장치상태 카메라1;
         private 장치상태 카메라2;
         private 장치상태 카메라3;

@@ -49,19 +49,19 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.59574F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.40426F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 115);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 130);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(1, 87);
+            this.label1.Location = new System.Drawing.Point(1, 99);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 27);
+            this.label1.Size = new System.Drawing.Size(210, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Channel Inspection";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,7 +75,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(210, 97);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -87,7 +87,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "TitleView";
-            this.Size = new System.Drawing.Size(212, 115);
+            this.Size = new System.Drawing.Size(212, 130);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

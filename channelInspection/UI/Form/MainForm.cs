@@ -36,6 +36,7 @@ namespace channelInspection.UI.Form
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex);
                 //Global.오류로그("메인페이지", "프로그램 시작", "프로그램 시작 중 오류가 발생하였습니다.\n" + ex.Message, true);
             }
         }
