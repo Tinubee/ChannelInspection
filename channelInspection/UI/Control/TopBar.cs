@@ -16,20 +16,7 @@ namespace channelInspection.UI.Control
         {
             InitializeComponent();
             b창닫기.Click += B창닫기_Click;
-            b창최대화.Click += B창최대화_Click;
-            b창최소화.Click += B창최소화_Click;
         }
-
-        private void B창최소화_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void B창최대화_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void B창닫기_Click(object sender, EventArgs e)
         {
             Application.Exit();

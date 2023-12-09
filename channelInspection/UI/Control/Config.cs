@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class CiView : UserControl
+    public partial class Config : UserControl
     {
-        public CiView()
+        public Config()
         {
             InitializeComponent();
         }
