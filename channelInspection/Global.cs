@@ -34,12 +34,12 @@ namespace channelInspection
         public static class 장치상태
         {
             public static Boolean 정상여부 { get { return true; } }
-            public static Boolean 카메라1 { get { return Global.그랩제어.카메라1.상태; } }
-            public static Boolean 카메라2 { get { return Global.그랩제어.카메라2.상태; } }
-            public static Boolean 카메라3 { get { return Global.그랩제어.카메라3.상태; } }
-            public static Boolean 카메라4 { get { return Global.그랩제어.카메라4.상태; } }
-            public static Boolean 카메라5 { get { return Global.그랩제어.카메라5.상태; } }
-            public static Boolean 카메라6 { get { return Global.그랩제어.카메라6.상태; } }
+            public static Boolean 카메라1 { get { return Global.그랩제어?.카메라1?.상태 ?? false; } }
+            public static Boolean 카메라2 { get { return Global.그랩제어?.카메라2?.상태 ?? false; } }
+            public static Boolean 카메라3 { get { return Global.그랩제어?.카메라3?.상태 ?? false; } }
+            public static Boolean 카메라4 { get { return Global.그랩제어?.카메라4?.상태 ?? false; } }
+            public static Boolean 카메라5 { get { return Global.그랩제어?.카메라5?.상태 ?? false; } }
+            public static Boolean 카메라6 { get { return Global.그랩제어?.카메라6?.상태 ?? false; } }
         }
 
         public static Boolean Init()
@@ -56,8 +56,8 @@ namespace channelInspection
 
                 //그랩제어.Init();
                 환경설정.Init();
-                //모델자료.Init();
-                //비전도구.Init();
+                모델자료.Init();
+                비전도구.Init();
                 //신호제어.Init();
                 Initialized.Invoke(null, true);
                 return true;

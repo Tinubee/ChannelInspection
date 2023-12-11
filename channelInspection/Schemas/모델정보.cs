@@ -12,13 +12,15 @@ namespace channelInspection.Schemas
 {
     public enum 모델구분
     {
-        [Description("SE Channel")]
+        [Description("K12SE Channel")]
         K12SE_CHANNEL,
+        [Description("K12A Channel")]
+        K12A_CHANNEL,
     }
     public class 모델정보
     {
         [JsonProperty("Number")]
-        public Int32 모델번호 { get; set; } = 0;
+        public Int32 모델번호 { get { return (Int32)this.모델구분; } }
         [JsonProperty("ModelName")]
         public 모델구분 모델구분 { get; set; } = 모델구분.K12SE_CHANNEL;
         [JsonProperty("SolutionPath")]

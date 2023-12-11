@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace channelInspection.UI.Control
 {
-    public partial class TopBar : UserControl
+    public partial class SetInspection : UserControl
     {
-        public TopBar()
+        public SetInspection()
         {
             InitializeComponent();
-            b창닫기.Click += B창닫기_Click;
-        }
-
-        public void Init()
-        {
-            this.deviceLamp1.Init();
-        }
-
-        private void B창닫기_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

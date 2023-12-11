@@ -28,12 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.vmGlobalToolControl1 = new VMControls.Winform.Release.VmGlobalToolControl();
+            this.vmMainViewConfigControl1 = new VMControls.Winform.Release.VmMainViewConfigControl();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.vmGlobalToolControl1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.vmMainViewConfigControl1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1413, 818);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // vmGlobalToolControl1
+            // 
+            this.vmGlobalToolControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vmGlobalToolControl1.Location = new System.Drawing.Point(2, 2);
+            this.vmGlobalToolControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.vmGlobalToolControl1.Name = "vmGlobalToolControl1";
+            this.vmGlobalToolControl1.Size = new System.Drawing.Size(1409, 77);
+            this.vmGlobalToolControl1.TabIndex = 0;
+            // 
+            // vmMainViewConfigControl1
+            // 
+            this.vmMainViewConfigControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vmMainViewConfigControl1.Location = new System.Drawing.Point(2, 83);
+            this.vmMainViewConfigControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.vmMainViewConfigControl1.Name = "vmMainViewConfigControl1";
+            this.vmMainViewConfigControl1.Size = new System.Drawing.Size(1409, 733);
+            this.vmMainViewConfigControl1.TabIndex = 1;
+// TODO: '기본 형식이 잘못되었습니다. System.IntPtr. CodeObjectCreateExpression을 사용하십시오.' 예외가 발생하여 ''의 코드를 생성하지 못했습니다.
+            // 
+            // Teaching
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(1413, 818);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Name = "Teaching";
             this.Text = "Teaching";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private VMControls.Winform.Release.VmGlobalToolControl vmGlobalToolControl1;
+        private VMControls.Winform.Release.VmMainViewConfigControl vmMainViewConfigControl1;
     }
 }

@@ -87,7 +87,7 @@ namespace channelInspection.UI.Control
                 this.Set(상태 ? 상태구분.정상 : 상태구분.오류);
             }
 
-            public void Set(상태구분 상태)
+            public void Set(상태구분 상태)                                                                                                                                                                        
             {
                 if (this.현재상태 == 상태) return;
                 this.현재상태 = 상태;

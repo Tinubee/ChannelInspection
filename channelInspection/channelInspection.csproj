@@ -185,16 +185,36 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="UIAutomationClient" />
-    <Reference Include="VM.AppData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d08364abe153bcd0, processorArchitecture=MSIL" />
-    <Reference Include="VM.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48472957e1d7b05f, processorArchitecture=MSIL" />
-    <Reference Include="VM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=61600122bc9264b9, processorArchitecture=MSIL" />
-    <Reference Include="VM.ModuleControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6903f2164b1b4178, processorArchitecture=MSIL" />
-    <Reference Include="VM.PlatformSDKCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c1484a72052ee3d4, processorArchitecture=MSIL" />
-    <Reference Include="VMBaseControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71707d2e549a163e, processorArchitecture=MSIL" />
-    <Reference Include="VMControls.BaseInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=14444b8df74b6e6a, processorArchitecture=MSIL" />
-    <Reference Include="VMControls.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb41614600cf774b, processorArchitecture=MSIL" />
-    <Reference Include="VMControls.RenderInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bcfc50547abbb24, processorArchitecture=MSIL" />
-    <Reference Include="VMControls.Winform.Release, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2efa940dfee4dc7e, processorArchitecture=MSIL" />
+    <Reference Include="VM.AppData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d08364abe153bcd0, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VM.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48472957e1d7b05f, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=61600122bc9264b9, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VM.ModuleControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6903f2164b1b4178, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VM.PlatformSDKCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c1484a72052ee3d4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VMBaseControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71707d2e549a163e, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VMControls.BaseInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=14444b8df74b6e6a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VMControls.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb41614600cf774b, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VMControls.RenderInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bcfc50547abbb24, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VMControls.Winform.Release, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2efa940dfee4dc7e, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +234,12 @@
     </Compile>
     <Compile Include="UI\Control\CamSetting.Designer.cs">
       <DependentUpon>CamSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Control\CamViewers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Control\CamViewers.Designer.cs">
+      <DependentUpon>CamViewers.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Control\Config.cs">
       <SubType>UserControl</SubType>
@@ -238,6 +264,18 @@
     </Compile>
     <Compile Include="UI\Control\IOControl.Designer.cs">
       <DependentUpon>IOControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Control\SetInspection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Control\SetInspection.Designer.cs">
+      <DependentUpon>SetInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Control\SetVariables.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Control\SetVariables.Designer.cs">
+      <DependentUpon>SetVariables.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Control\State.cs">
       <SubType>UserControl</SubType>
@@ -298,6 +336,9 @@
     <EmbeddedResource Include="UI\Control\CamSetting.resx">
       <DependentUpon>CamSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Control\CamViewers.resx">
+      <DependentUpon>CamViewers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\DeviceLamp.resx">
       <DependentUpon>DeviceLamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Control\SetVariables.resx">
+      <DependentUpon>SetVariables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\State.resx">
       <DependentUpon>State.cs</DependentUpon>
@@ -319,6 +363,10 @@
     <EmbeddedResource Include="UI\Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teaching.resx">
+      <DependentUpon>Teaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="channelInspection.Schemas.모델자료.datasource" />
     <None Include="channelInspection.Schemas.카메라장치.datasource" />
     <None Include="channelInspection.Schemas.환경설정.datasource" />
     <None Include="packages.config" />

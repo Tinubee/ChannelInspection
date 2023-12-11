@@ -24,6 +24,8 @@ namespace channelInspection.UI.Form
         private Boolean Init()
         {
             e환경설정.Init();
+            topBar1.Init();
+            state1.Init();
             //뷰어들 추가되면 초기화 시켜주면됨.
             return true;
         }
