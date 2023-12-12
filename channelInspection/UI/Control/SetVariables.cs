@@ -17,6 +17,12 @@ namespace channelInspection.UI.Control
         {
             InitializeComponent();
             b도구설정.Click += B도구설정_Click;
+            b설정저장.Click += B설정저장_Click;
+        }
+
+        private void B설정저장_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void B도구설정_Click(object sender, EventArgs e)

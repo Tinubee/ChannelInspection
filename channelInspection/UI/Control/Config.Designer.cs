@@ -107,6 +107,7 @@
             this.b이미지저장경로선택.Dock = System.Windows.Forms.DockStyle.Fill;
             this.b이미지저장경로선택.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b이미지저장경로선택.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.b이미지저장경로선택.ForeColor = System.Drawing.SystemColors.Control;
             this.b이미지저장경로선택.Location = new System.Drawing.Point(1092, 91);
             this.b이미지저장경로선택.Margin = new System.Windows.Forms.Padding(0);
             this.b이미지저장경로선택.Name = "b이미지저장경로선택";
@@ -198,6 +199,7 @@
             this.b설정저장경로선택.Dock = System.Windows.Forms.DockStyle.Fill;
             this.b설정저장경로선택.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b설정저장경로선택.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.b설정저장경로선택.ForeColor = System.Drawing.SystemColors.Control;
             this.b설정저장경로선택.Location = new System.Drawing.Point(1092, 1);
             this.b설정저장경로선택.Margin = new System.Windows.Forms.Padding(0);
             this.b설정저장경로선택.Name = "b설정저장경로선택";
@@ -211,6 +213,7 @@
             this.b데이터저장경로선택.Dock = System.Windows.Forms.DockStyle.Fill;
             this.b데이터저장경로선택.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b데이터저장경로선택.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.b데이터저장경로선택.ForeColor = System.Drawing.SystemColors.Control;
             this.b데이터저장경로선택.Location = new System.Drawing.Point(1092, 46);
             this.b데이터저장경로선택.Margin = new System.Windows.Forms.Padding(0);
             this.b데이터저장경로선택.Name = "b데이터저장경로선택";
@@ -508,7 +511,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(0);

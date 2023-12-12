@@ -35,6 +35,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.cb모델선택 = new System.Windows.Forms.ComboBox();
+            this.bind모델자료 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
@@ -46,12 +47,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.bind모델자료 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bind모델자료)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bind모델자료)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -76,7 +76,7 @@
             // 
             // titleView1
             // 
-            this.titleView1.BackColor = System.Drawing.Color.DimGray;
+            this.titleView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.titleView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.titleView1.Location = new System.Drawing.Point(0, 0);
             this.titleView1.Margin = new System.Windows.Forms.Padding(0);
@@ -118,9 +118,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DimGray;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(1, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
@@ -131,18 +132,23 @@
             // 
             // cb모델선택
             // 
-            this.cb모델선택.BackColor = System.Drawing.Color.DimGray;
+            this.cb모델선택.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.cb모델선택.DataSource = this.bind모델자료;
             this.cb모델선택.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cb모델선택.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb모델선택.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb모델선택.Font = new System.Drawing.Font("맑은 고딕", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cb모델선택.ForeColor = System.Drawing.SystemColors.Control;
             this.cb모델선택.FormattingEnabled = true;
             this.cb모델선택.Location = new System.Drawing.Point(1, 50);
             this.cb모델선택.Margin = new System.Windows.Forms.Padding(0);
             this.cb모델선택.Name = "cb모델선택";
             this.cb모델선택.Size = new System.Drawing.Size(407, 73);
             this.cb모델선택.TabIndex = 1;
+            // 
+            // bind모델자료
+            // 
+            this.bind모델자료.DataSource = typeof(channelInspection.Schemas.모델자료);
             // 
             // tableLayoutPanel4
             // 
@@ -192,6 +198,7 @@
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
             this.label10.Location = new System.Drawing.Point(373, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 91);
@@ -204,6 +211,7 @@
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(250, 32);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 91);
@@ -216,6 +224,7 @@
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(127, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 91);
@@ -288,6 +297,7 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(4, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 91);
@@ -309,15 +319,11 @@
             this.button1.Text = "Count Reset";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // bind모델자료
-            // 
-            this.bind모델자료.DataSource = typeof(channelInspection.Schemas.모델자료);
-            // 
             // State
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "State";
@@ -326,10 +332,10 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bind모델자료)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bind모델자료)).EndInit();
             this.ResumeLayout(false);
 
         }

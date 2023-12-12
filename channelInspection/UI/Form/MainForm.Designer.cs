@@ -40,18 +40,22 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.e결과뷰어 = new channelInspection.UI.Control.CamViewers();
             this.e환경설정 = new channelInspection.UI.Control.Config();
             this.camSetting1 = new channelInspection.UI.Control.CamSetting();
+            this.setVariables1 = new channelInspection.UI.Control.SetVariables();
+            this.logViewer1 = new channelInspection.UI.Control.LogViewer();
             this.state1 = new channelInspection.UI.Control.State();
             this.topBar1 = new channelInspection.UI.Control.TopBar();
-            this.setVariables1 = new channelInspection.UI.Control.SetVariables();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -89,6 +93,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.Controls.Add(this.e결과뷰어);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
@@ -98,7 +103,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.tabPage2.Controls.Add(this.tabControl2);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
@@ -185,11 +190,11 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1906, 862);
+            this.tabPage4.Size = new System.Drawing.Size(1906, 858);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "도구설정";
             // 
@@ -206,16 +211,27 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage6.Controls.Add(this.logViewer1);
             this.tabPage6.Location = new System.Drawing.Point(4, 26);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1914, 888);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "로그";
             // 
+            // e결과뷰어
+            // 
+            this.e결과뷰어.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.e결과뷰어.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.e결과뷰어.Location = new System.Drawing.Point(0, 0);
+            this.e결과뷰어.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.e결과뷰어.Name = "e결과뷰어";
+            this.e결과뷰어.Size = new System.Drawing.Size(1914, 888);
+            this.e결과뷰어.TabIndex = 0;
+            // 
             // e환경설정
             // 
-            this.e환경설정.BackColor = System.Drawing.Color.DimGray;
+            this.e환경설정.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.e환경설정.Dock = System.Windows.Forms.DockStyle.Fill;
             this.e환경설정.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.e환경설정.Location = new System.Drawing.Point(1, 27);
@@ -226,6 +242,7 @@
             // 
             // camSetting1
             // 
+            this.camSetting1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.camSetting1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.camSetting1.Location = new System.Drawing.Point(1, 454);
             this.camSetting1.Margin = new System.Windows.Forms.Padding(0);
@@ -233,9 +250,29 @@
             this.camSetting1.Size = new System.Drawing.Size(1904, 403);
             this.camSetting1.TabIndex = 4;
             // 
+            // setVariables1
+            // 
+            this.setVariables1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.setVariables1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setVariables1.Location = new System.Drawing.Point(0, 0);
+            this.setVariables1.Margin = new System.Windows.Forms.Padding(0);
+            this.setVariables1.Name = "setVariables1";
+            this.setVariables1.Size = new System.Drawing.Size(1906, 858);
+            this.setVariables1.TabIndex = 0;
+            // 
+            // logViewer1
+            // 
+            this.logViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.logViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logViewer1.Location = new System.Drawing.Point(0, 0);
+            this.logViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.logViewer1.Name = "logViewer1";
+            this.logViewer1.Size = new System.Drawing.Size(1914, 888);
+            this.logViewer1.TabIndex = 0;
+            // 
             // state1
             // 
-            this.state1.BackColor = System.Drawing.Color.DimGray;
+            this.state1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.state1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.state1.Location = new System.Drawing.Point(1, 1);
             this.state1.Margin = new System.Windows.Forms.Padding(0);
@@ -245,7 +282,7 @@
             // 
             // topBar1
             // 
-            this.topBar1.BackColor = System.Drawing.Color.DimGray;
+            this.topBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.topBar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.topBar1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.topBar1.Location = new System.Drawing.Point(0, 0);
@@ -254,21 +291,11 @@
             this.topBar1.Size = new System.Drawing.Size(1924, 39);
             this.topBar1.TabIndex = 0;
             // 
-            // setVariables1
-            // 
-            this.setVariables1.BackColor = System.Drawing.Color.DimGray;
-            this.setVariables1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.setVariables1.Location = new System.Drawing.Point(0, 0);
-            this.setVariables1.Margin = new System.Windows.Forms.Padding(0);
-            this.setVariables1.Name = "setVariables1";
-            this.setVariables1.Size = new System.Drawing.Size(1906, 858);
-            this.setVariables1.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.topBar1);
@@ -279,15 +306,16 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -311,5 +339,7 @@
         private Control.CamSetting camSetting1;
         private Control.State state1;
         private Control.SetVariables setVariables1;
+        private Control.CamViewers e결과뷰어;
+        private Control.LogViewer logViewer1;
     }
 }

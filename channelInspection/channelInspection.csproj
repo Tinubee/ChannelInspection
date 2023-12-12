@@ -218,9 +218,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Schemas\Data\BaseTable.cs" />
     <Compile Include="Schemas\VmGlobals.cs" />
     <Compile Include="Schemas\검사정보.cs" />
     <Compile Include="Schemas\그랩제어.cs" />
+    <Compile Include="Schemas\로그정보.cs" />
     <Compile Include="Schemas\모델정보.cs" />
     <Compile Include="Schemas\비전도구.cs" />
     <Compile Include="Schemas\신호제어.cs" />
@@ -264,6 +266,12 @@
     </Compile>
     <Compile Include="UI\Control\IOControl.Designer.cs">
       <DependentUpon>IOControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Control\LogViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Control\LogViewer.Designer.cs">
+      <DependentUpon>LogViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Control\SetInspection.cs">
       <SubType>UserControl</SubType>
@@ -348,6 +356,9 @@
     <EmbeddedResource Include="UI\Control\DeviceLamp.resx">
       <DependentUpon>DeviceLamp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Control\LogViewer.resx">
+      <DependentUpon>LogViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\SetVariables.resx">
       <DependentUpon>SetVariables.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,6 +377,8 @@
     <EmbeddedResource Include="UI\Form\Teaching.resx">
       <DependentUpon>Teaching.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="channelInspection.Schemas.VmGlobals.datasource" />
+    <None Include="channelInspection.Schemas.로그자료.datasource" />
     <None Include="channelInspection.Schemas.모델자료.datasource" />
     <None Include="channelInspection.Schemas.카메라장치.datasource" />
     <None Include="channelInspection.Schemas.환경설정.datasource" />
