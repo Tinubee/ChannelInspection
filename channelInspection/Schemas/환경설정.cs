@@ -179,13 +179,6 @@ namespace channelInspection.Schemas
             this.모델변경알림?.Invoke(this.선택모델);
         }
 
-
-
-
-
-
-
-
         #region 드라이브 용량계산
         private DriveInfo ImageSaveDrive = null;
         private DriveInfo GetSaveImageDrive()

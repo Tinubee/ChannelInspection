@@ -465,6 +465,11 @@
             this.n검사자료보관일.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.n검사자료보관일.Location = new System.Drawing.Point(910, 1);
             this.n검사자료보관일.Margin = new System.Windows.Forms.Padding(0);
+            this.n검사자료보관일.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.n검사자료보관일.Name = "n검사자료보관일";
             this.n검사자료보관일.Size = new System.Drawing.Size(304, 35);
             this.n검사자료보관일.TabIndex = 9;
@@ -476,6 +481,11 @@
             this.n로그보관일.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.n로그보관일.Location = new System.Drawing.Point(910, 40);
             this.n로그보관일.Margin = new System.Windows.Forms.Padding(0);
+            this.n로그보관일.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.n로그보관일.Name = "n로그보관일";
             this.n로그보관일.Size = new System.Drawing.Size(304, 35);
             this.n로그보관일.TabIndex = 10;
@@ -487,6 +497,11 @@
             this.n검사결과자릿수.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.n검사결과자릿수.Location = new System.Drawing.Point(910, 79);
             this.n검사결과자릿수.Margin = new System.Windows.Forms.Padding(0);
+            this.n검사결과자릿수.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.n검사결과자릿수.Name = "n검사결과자릿수";
             this.n검사결과자릿수.Size = new System.Drawing.Size(304, 35);
             this.n검사결과자릿수.TabIndex = 11;

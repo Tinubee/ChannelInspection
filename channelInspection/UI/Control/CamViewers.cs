@@ -20,6 +20,8 @@ namespace channelInspection.UI.Control
 
         public void Init()
         {
+            if (Global.비전도구.Count == 0) return;
+
             this.vmRenderControl1.ModuleSource = Global.비전도구.GetItem(Flow구분.Flow1).graphicsSetModuleTool;
             this.vmRenderControl2.ModuleSource = Global.비전도구.GetItem(Flow구분.Flow2).graphicsSetModuleTool;
             this.vmRenderControl3.ModuleSource = Global.비전도구.GetItem(Flow구분.Flow3).graphicsSetModuleTool;

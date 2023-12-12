@@ -27,6 +27,9 @@ namespace channelInspection.UI.Control
             this.cb양품이미지저장여부.Checked = Global.환경설정.사진저장OK;
             this.cb불량이미지저장여부.Checked = Global.환경설정.사진저장NG;
             this.cb비전검사사용여부.Checked = Global.환경설정.검사여부;
+            this.n로그보관일.Value = Global.환경설정.로그보관;
+            this.n검사자료보관일.Value = Global.환경설정.결과보관;
+            this.n검사결과자릿수.Value = Global.환경설정.결과자릿수;
 
             this.tb설정저장경로.Text = this.d기본경로.SelectedPath;
             this.tb데이터저장경로.Text = this.d데이터저장.SelectedPath;
@@ -61,7 +64,6 @@ namespace channelInspection.UI.Control
         {
             if (this.d데이터저장.ShowDialog() == DialogResult.OK)
                 this.tb이미지저장경로.Text = this.d데이터저장.SelectedPath;
-
         }
 
         private void B데이터저장경로선택_Click(object sender, EventArgs e)

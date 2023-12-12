@@ -34,6 +34,7 @@
             this.b창닫기 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.deviceLamp1 = new channelInspection.UI.Control.DeviceLamp();
+            this.b카메라재연결 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -126,11 +127,24 @@
             this.deviceLamp1.Size = new System.Drawing.Size(446, 38);
             this.deviceLamp1.TabIndex = 0;
             // 
+            // b카메라재연결
+            // 
+            this.b카메라재연결.Dock = System.Windows.Forms.DockStyle.Left;
+            this.b카메라재연결.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b카메라재연결.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.b카메라재연결.Location = new System.Drawing.Point(448, 0);
+            this.b카메라재연결.Name = "b카메라재연결";
+            this.b카메라재연결.Size = new System.Drawing.Size(75, 40);
+            this.b카메라재연결.TabIndex = 2;
+            this.b카메라재연결.Text = "재연결";
+            this.b카메라재연결.UseVisualStyleBackColor = true;
+            // 
             // TopBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.Controls.Add(this.b카메라재연결);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -151,5 +165,6 @@
         private System.Windows.Forms.Button b창닫기;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private DeviceLamp deviceLamp1;
+        private System.Windows.Forms.Button b카메라재연결;
     }
 }

@@ -67,7 +67,7 @@
             this.vmRenderControl1.CoordinateInfoVisible = true;
             this.vmRenderControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vmRenderControl1.ImageSource = null;
-            this.vmRenderControl1.IsShowCustomROIMenu = false;
+            //this.vmRenderControl1.IsShowCustomROIMenu = false;
             this.vmRenderControl1.Location = new System.Drawing.Point(4, 4);
             this.vmRenderControl1.ModuleSource = null;
             this.vmRenderControl1.Name = "vmRenderControl1";
@@ -80,7 +80,7 @@
             this.vmRenderControl2.CoordinateInfoVisible = true;
             this.vmRenderControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vmRenderControl2.ImageSource = null;
-            this.vmRenderControl2.IsShowCustomROIMenu = false;
+            //this.vmRenderControl2.IsShowCustomROIMenu = false;
             this.vmRenderControl2.Location = new System.Drawing.Point(642, 4);
             this.vmRenderControl2.ModuleSource = null;
             this.vmRenderControl2.Name = "vmRenderControl2";
@@ -93,7 +93,7 @@
             this.vmRenderControl3.CoordinateInfoVisible = true;
             this.vmRenderControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vmRenderControl3.ImageSource = null;
-            this.vmRenderControl3.IsShowCustomROIMenu = false;
+            //this.vmRenderControl3.IsShowCustomROIMenu = false;
             this.vmRenderControl3.Location = new System.Drawing.Point(1280, 4);
             this.vmRenderControl3.ModuleSource = null;
             this.vmRenderControl3.Name = "vmRenderControl3";
@@ -106,7 +106,7 @@
             this.vmRenderControl4.CoordinateInfoVisible = true;
             this.vmRenderControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vmRenderControl4.ImageSource = null;
-            this.vmRenderControl4.IsShowCustomROIMenu = false;
+            //this.vmRenderControl4.IsShowCustomROIMenu = false;
             this.vmRenderControl4.Location = new System.Drawing.Point(4, 454);
             this.vmRenderControl4.ModuleSource = null;
             this.vmRenderControl4.Name = "vmRenderControl4";
@@ -119,7 +119,7 @@
             this.vmRenderControl5.CoordinateInfoVisible = true;
             this.vmRenderControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vmRenderControl5.ImageSource = null;
-            this.vmRenderControl5.IsShowCustomROIMenu = false;
+            //this.vmRenderControl5.IsShowCustomROIMenu = false;
             this.vmRenderControl5.Location = new System.Drawing.Point(642, 454);
             this.vmRenderControl5.ModuleSource = null;
             this.vmRenderControl5.Name = "vmRenderControl5";
@@ -132,7 +132,7 @@
             this.vmRenderControl6.CoordinateInfoVisible = true;
             this.vmRenderControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vmRenderControl6.ImageSource = null;
-            this.vmRenderControl6.IsShowCustomROIMenu = false;
+            //this.vmRenderControl6.IsShowCustomROIMenu = false;
             this.vmRenderControl6.Location = new System.Drawing.Point(1280, 454);
             this.vmRenderControl6.ModuleSource = null;
             this.vmRenderControl6.Name = "vmRenderControl6";

@@ -27,6 +27,7 @@ namespace channelInspection.UI.Control
             this.cb모델선택.DisplayMember = "모델구분";
 
             this.originIndex = Global.모델자료.선택모델.모델번호;
+            this.cb모델선택.SelectedIndex = this.originIndex;
             this.cb모델선택.SelectedIndexChanged += 모델변경;
         }
 

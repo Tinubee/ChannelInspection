@@ -43,7 +43,7 @@ namespace channelInspection.Utils
         public static void DebugException(Exception ex, Int32 idx, String name = "Exception")
         {
             if (ex == null) return;
-            Debug.WriteLine(ex.Message, $"{name}({idx.ToString()})");
+            Debug.WriteLine(ex.Message, $"{name}({idx})");
             if (ex.InnerException != null)
                 DebugException(ex.InnerException, idx + 1, name);
         }
