@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using VM.Controls;
 using System.Windows;
+using System.Text.RegularExpressions;
+using Microsoft.VisualBasic;
 
 namespace channelInspection.Utils
 {
@@ -65,5 +67,22 @@ namespace channelInspection.Utils
             if (String.IsNullOrEmpty(caption)) caption = "Confirm";
             return MessageBox.Show(message, caption, MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
         }
+        public static String StrValue(Object value)
+        {
+            if (IsNullValue(value)) return String.Empty;
+            return Convert.ToString(value).Trim(new char[] { Strings.Chr(32), ControlChars.Tab, ControlChars.Lf, ControlChars.Cr });
+        }
+        public static Decimal StrToNum(Object value)
+        {
+            String str = StrValue(value);
+            if (String.IsNullOrEmpty(str)) return 0;
+            Regex rx = new Regex(@"(-?[0-9,]+([.\d]+)?)");
+            str = rx.Match(str).Value;
+            if (String.IsNullOrEmpty(str)) return 0;
+            return Convert.ToDecimal(str);
+        }
+
+        public static Boolean IsNullValue(Object value) => value == null || Convert.IsDBNull(value);
+        public static Int32 IntValue(Object value) => Convert.ToInt32(StrToNum(value));
     }
 }

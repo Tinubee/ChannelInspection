@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Config));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.b이미지저장경로선택 = new System.Windows.Forms.Button();
             this.tb데이터저장경로 = new System.Windows.Forms.TextBox();
@@ -498,7 +499,7 @@
             this.b설정저장.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b설정저장.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.b설정저장.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.b설정저장.Image = global::channelInspection.Properties.Resources.SaveSetting;
+            this.b설정저장.Image = ((System.Drawing.Image)(resources.GetObject("b설정저장.Image")));
             this.b설정저장.Location = new System.Drawing.Point(910, 159);
             this.b설정저장.Margin = new System.Windows.Forms.Padding(0);
             this.b설정저장.Name = "b설정저장";

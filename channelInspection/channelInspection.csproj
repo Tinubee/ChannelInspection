@@ -108,6 +108,7 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.18.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.18\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MvCamCtrl.Net">
       <HintPath>C:\Program Files (x86)\MVS\Development\DotNet\AnyCpu\MvCamCtrl.Net.dll</HintPath>
     </Reference>
@@ -273,12 +274,6 @@
     </Compile>
     <Compile Include="UI\Control\LogViewer.Designer.cs">
       <DependentUpon>LogViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Control\SetInspection.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Control\SetInspection.Designer.cs">
-      <DependentUpon>SetInspection.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Control\SetVariables.cs">
       <SubType>UserControl</SubType>

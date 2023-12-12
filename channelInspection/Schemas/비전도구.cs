@@ -1,4 +1,5 @@
-﻿using GraphicsSetModuleCs;
+﻿using channelInspection.Utils;
+using GraphicsSetModuleCs;
 using ImageSourceModuleCs;
 using OpenCvSharp;
 using ShellModuleCs;
@@ -154,6 +155,34 @@ namespace channelInspection.Schemas
                 Debug.WriteLine(ex);
                 //Global.오류로그(로그영역, "검사오류", $"[{구분}] VM 검사오류: {ex.Message}", false);
                 return false;
+            }
+        }
+
+        private void SetResult(Flow구분 구분)
+        {
+            ShellModuleTool shell = Global.비전도구.GetItem(구분).shellModuleTool;
+            for (int i = 6; i < shell.Outputs.Count; i++)
+            {
+                List<VmIO> t = shell.Outputs[i].GetAllIO();
+                String name = t[0].UniqueName.Split('%')[1];
+                if (t[0].Value != null)
+                {
+                    String str = ((ImvsSdkDefine.IMVS_MODULE_STRING_VALUE_EX[])t[0].Value)[0].strValue;
+                    //Debug.WriteLine(str, name);
+                    try
+                    {
+                        String[] vals = str.Split(';');
+                        Boolean ok = false;
+                        Single val = Single.NaN;
+                        if (!String.IsNullOrEmpty(vals[0])) val = Convert.ToSingle(vals[0]);
+                        if (vals.Length > 1) ok = Util.IntValue(vals[1]) == 1;
+                        //Global.검사자료.카메라검사((카메라구분)구분, name, val, ok);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.WriteLine(e.Message, name);
+                    }
+                }
             }
         }
 

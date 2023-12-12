@@ -100,7 +100,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.DimGray;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -137,13 +137,13 @@
             this.cb모델선택.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cb모델선택.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb모델선택.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb모델선택.Font = new System.Drawing.Font("맑은 고딕", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cb모델선택.Font = new System.Drawing.Font("맑은 고딕", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cb모델선택.ForeColor = System.Drawing.SystemColors.Control;
             this.cb모델선택.FormattingEnabled = true;
             this.cb모델선택.Location = new System.Drawing.Point(1, 50);
             this.cb모델선택.Margin = new System.Windows.Forms.Padding(0);
             this.cb모델선택.Name = "cb모델선택";
-            this.cb모델선택.Size = new System.Drawing.Size(407, 73);
+            this.cb모델선택.Size = new System.Drawing.Size(407, 55);
             this.cb모델선택.TabIndex = 1;
             // 
             // bind모델자료

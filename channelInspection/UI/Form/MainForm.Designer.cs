@@ -31,19 +31,18 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.e결과뷰어 = new channelInspection.UI.Control.CamViewers();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.e결과뷰어 = new channelInspection.UI.Control.CamViewers();
             this.e환경설정 = new channelInspection.UI.Control.Config();
             this.camSetting1 = new channelInspection.UI.Control.CamSetting();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.setVariables1 = new channelInspection.UI.Control.SetVariables();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.logViewer1 = new channelInspection.UI.Control.LogViewer();
             this.state1 = new channelInspection.UI.Control.State();
             this.topBar1 = new channelInspection.UI.Control.TopBar();
@@ -101,6 +100,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "검사";
             // 
+            // e결과뷰어
+            // 
+            this.e결과뷰어.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.e결과뷰어.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.e결과뷰어.Location = new System.Drawing.Point(0, 0);
+            this.e결과뷰어.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.e결과뷰어.Name = "e결과뷰어";
+            this.e결과뷰어.Size = new System.Drawing.Size(1914, 888);
+            this.e결과뷰어.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -116,7 +125,6 @@
             // 
             this.tabControl2.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
@@ -188,47 +196,6 @@
             this.label1.Text = "Config Setting";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage4.Location = new System.Drawing.Point(4, 4);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1906, 858);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "도구설정";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage5.Controls.Add(this.setVariables1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 4);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1906, 858);
-            this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "변수설정";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage6.Controls.Add(this.logViewer1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 26);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1914, 888);
-            this.tabPage6.TabIndex = 2;
-            this.tabPage6.Text = "로그";
-            // 
-            // e결과뷰어
-            // 
-            this.e결과뷰어.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.e결과뷰어.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.e결과뷰어.Location = new System.Drawing.Point(0, 0);
-            this.e결과뷰어.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.e결과뷰어.Name = "e결과뷰어";
-            this.e결과뷰어.Size = new System.Drawing.Size(1914, 888);
-            this.e결과뷰어.TabIndex = 0;
-            // 
             // e환경설정
             // 
             this.e환경설정.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -250,6 +217,17 @@
             this.camSetting1.Size = new System.Drawing.Size(1904, 403);
             this.camSetting1.TabIndex = 4;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage5.Controls.Add(this.setVariables1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1906, 858);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "도구설정";
+            // 
             // setVariables1
             // 
             this.setVariables1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -259,6 +237,16 @@
             this.setVariables1.Name = "setVariables1";
             this.setVariables1.Size = new System.Drawing.Size(1906, 858);
             this.setVariables1.TabIndex = 0;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage6.Controls.Add(this.logViewer1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 26);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1914, 888);
+            this.tabPage6.TabIndex = 2;
+            this.tabPage6.Text = "로그";
             // 
             // logViewer1
             // 
@@ -329,7 +317,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

@@ -41,7 +41,7 @@ namespace channelInspection.Schemas
         public Int32 로그보관 { get; set; } = 60;
 
         [JsonProperty("CurrentModel")]
-        public 모델구분 선택모델 { get; set; } = 모델구분.K12SE_CHANNEL;
+        public 모델구분 선택모델 { get; set; } = 모델구분.None;
 
         [Description("Model Image Path")]
         public String 사진경로 { get { return Path.Combine(기본경로, "Items"); } } 
