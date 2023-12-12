@@ -60,7 +60,7 @@ namespace channelInspection.Schemas
                 return false;
             }
             //장치 start 해줘야됨.
-
+            this.Start();
             return true;
         }
 

@@ -11,6 +11,9 @@ using System.Linq;
 using channelInspection.Utils;
 using System.Threading.Tasks;
 using System.Threading;
+using Basler.Pylon;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace channelInspection.Schemas
 {
@@ -42,21 +45,21 @@ namespace channelInspection.Schemas
         [JsonIgnore]
         private string 저장파일 { get { return Path.Combine(Global.환경설정.기본경로, "Cameras.json"); } }
 
-        public HikeGigE 카메라1 = null;
-        public HikeGigE 카메라2 = null;
-        public HikeGigE 카메라3 = null;
-        public HikeGigE 카메라4 = null;
-        public HikeGigE 카메라5 = null;
-        public HikeGigE 카메라6 = null;
+        public BaslerGigE 카메라1 = null;
+        public BaslerGigE 카메라2 = null;
+        public BaslerGigE 카메라3 = null;
+        public BaslerGigE 카메라4 = null;
+        public BaslerGigE 카메라5 = null;
+        public BaslerGigE 카메라6 = null;
 
         public Boolean Init()
         {
-            this.카메라1 = new HikeGigE() { 구분 = 카메라구분.Cam01, 코드 = "" };
-            this.카메라2 = new HikeGigE() { 구분 = 카메라구분.Cam02, 코드 = "" };
-            this.카메라3 = new HikeGigE() { 구분 = 카메라구분.Cam03, 코드 = "" };
-            this.카메라4 = new HikeGigE() { 구분 = 카메라구분.Cam04, 코드 = "" };
-            this.카메라5 = new HikeGigE() { 구분 = 카메라구분.Cam05, 코드 = "" };
-            this.카메라6 = new HikeGigE() { 구분 = 카메라구분.Cam06, 코드 = "" };
+            this.카메라1 = new BaslerGigE() { 구분 = 카메라구분.Cam01, 코드 = "" };
+            this.카메라2 = new BaslerGigE() { 구분 = 카메라구분.Cam02, 코드 = "" };
+            this.카메라3 = new BaslerGigE() { 구분 = 카메라구분.Cam03, 코드 = "" };
+            this.카메라4 = new BaslerGigE() { 구분 = 카메라구분.Cam04, 코드 = "" };
+            this.카메라5 = new BaslerGigE() { 구분 = 카메라구분.Cam05, 코드 = "" };
+            this.카메라6 = new BaslerGigE() { 구분 = 카메라구분.Cam06, 코드 = "" };
 
             this.Add(카메라구분.Cam01, this.카메라1);
             this.Add(카메라구분.Cam02, this.카메라2);
@@ -78,21 +81,29 @@ namespace channelInspection.Schemas
                 }
             }
 
-            List<CCameraInfo> 카메라들 = new List<CCameraInfo>();
-            Int32 nRet = CSystem.EnumDevices(CSystem.MV_GIGE_DEVICE, ref 카메라들);// | CSystem.MV_USB_DEVICE
-            if (!Validate("Enumerate devices fail!", nRet, true)) return false;
-
-            for (int i = 0; i < 카메라들.Count; i++)
+            List<ICameraInfo> 카메라들 = CameraFinder.Enumerate();
+            for (int lop = 0; lop < 카메라들.Count; lop++)
             {
-                CGigECameraInfo gigeInfo = 카메라들[i] as CGigECameraInfo;
-                HikeGigE gige = this.GetItem(gigeInfo.chSerialNumber) as HikeGigE;
+                ICameraInfo gigeInfo = 카메라들[lop];
+                BaslerGigE gige = this.GetItem(gigeInfo[CameraInfoKey.SerialNumber]) as BaslerGigE;
                 if (gige == null) continue;
-                //Debug.WriteLine(gigeInfo.chSerialNumber, "시리얼");
                 gige.Init(gigeInfo);
-                //if (gige.상태) gige.Start();
             }
+            //List<CCameraInfo> 카메라들 = new List<CCameraInfo>();
+            //Int32 nRet = CSystem.EnumDevices(CSystem.MV_GIGE_DEVICE, ref 카메라들);// | CSystem.MV_USB_DEVICE
+            //if (!Validate("Enumerate devices fail!", nRet, true)) return false;
 
-            Debug.WriteLine($"카메라 갯수: {this.Count}");
+            //for (int i = 0; i < 카메라들.Count; i++)
+            //{
+            //    CGigECameraInfo gigeInfo = 카메라들[i] as CGigECameraInfo;
+            //    HikeGigE gige = this.GetItem(gigeInfo.chSerialNumber) as HikeGigE;
+            //    if (gige == null) continue;
+            //    //Debug.WriteLine(gigeInfo.chSerialNumber, "시리얼");
+            //    gige.Init(gigeInfo);
+            //    //if (gige.상태) gige.Start();
+            //}
+
+            //Debug.WriteLine($"카메라 갯수: {this.Count}");
             GC.Collect();
             return true;
         }
@@ -282,10 +293,10 @@ namespace channelInspection.Schemas
             this.밝기적용();
         }
 
-        public void 밝기적용() 
+        public void 밝기적용()
         {
             if (this.Camera == null) return;
-            Int32 nRet = this.Camera.SetIntValue("BlackLevel", this.밝기); 
+            Int32 nRet = this.Camera.SetIntValue("BlackLevel", this.밝기);
             그랩제어.Validate($"[{this.구분}] 밝기 설정에 실패하였습니다.", nRet, true);
         }
 
@@ -347,5 +358,94 @@ namespace channelInspection.Schemas
         #endregion
     }
 
-    
+
+    public class BaslerGigE : 카메라장치
+    {
+        [JsonIgnore]
+        private Camera Camera = null;
+        [JsonIgnore]
+        private ICameraInfo Device;
+        [JsonIgnore]
+        private EventHandler<ImageGrabbedEventArgs> ImageGrabbedEvent;
+        public Boolean Init(ICameraInfo info)
+        {
+            try
+            {
+                this.Camera = new Camera(info);
+                this.Device = info;
+                //this.Camera.StreamGrabber.ImageGrabbed += onImageGrabbed;
+                this.ImageGrabbedEvent += onImageGrabbed;
+                this.상태 = this.Init();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                this.상태 = false;
+            }
+            return this.상태;
+        }
+
+        public void 노출적용()
+        {
+            if (this.Camera == null) return;
+
+            this.Camera.Parameters[PLCamera.ExposureTimeAbs].SetValue(this.노출);
+        }
+
+        public void 대비적용()
+        {
+            if (this.Camera == null) return;
+
+            this.Camera.Parameters[PLCamera.GainAbs].SetValue(this.대비);
+        }
+
+        public override Boolean Close()
+        {
+            this.Camera.Close();
+            this.Camera.Dispose();
+            return true;
+        }
+
+        public override Boolean Init()
+        {
+            this.Camera.Open(); //카메라오픈
+            this.Camera.Parameters[PLCamera.AcquisitionMode].SetValue(PLCamera.AcquisitionMode.SingleFrame);
+            this.Camera.Parameters[PLCamera.GevSCPSPacketSize].SetValue(9000); //카메라 프레임 올려주기위한 설정
+            return true;
+        }
+        public void TrigForce() => this.Camera.StreamGrabber.Start(1, GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
+        //{
+        //    this.Camera.StreamGrabber.Start(1, GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
+        //    return true;
+        //}
+
+        private void onImageGrabbed(object sender, ImageGrabbedEventArgs e)
+        {
+            //if (InvokeRequired)
+            //{
+            //    BeginInvoke(new EventHandler<Basler.Pylon.ImageGrabbedEventArgs>(onImageGrabbed), sender, e.Clone()); // 이게 중요. e.Clone()
+            //    GC.Collect();
+            //    return;
+            //}
+            try
+            {
+                if (!e.GrabResult.IsValid) return;
+
+                IGrabResult ImageResult = e.GrabResult;
+                Bitmap Image = new Bitmap(ImageResult.Width, ImageResult.Height, PixelFormat.Format32bppRgb);
+                BitmapData Imagedata = Image.LockBits(new Rectangle(0, 0, Image.Width, Image.Height), ImageLockMode.ReadWrite, Image.PixelFormat);
+                IntPtr ptrbmp = Imagedata.Scan0;
+                Mat image = new Mat(Image.Height, Image.Width, MatType.CV_8U, ptrbmp);
+                //Image.UnlockBits(Imagedata);
+                Global.그랩제어.그랩완료(this.구분, image);
+                GC.Collect();
+                //this.Stop();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return;
+            }
+        }
+    }
 }

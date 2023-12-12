@@ -118,9 +118,10 @@
             // 
             // tb데이터저장경로
             // 
-            this.tb데이터저장경로.BackColor = System.Drawing.Color.DimGray;
+            this.tb데이터저장경로.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.tb데이터저장경로.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb데이터저장경로.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb데이터저장경로.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tb데이터저장경로.Location = new System.Drawing.Point(244, 46);
             this.tb데이터저장경로.Margin = new System.Windows.Forms.Padding(0);
             this.tb데이터저장경로.Name = "tb데이터저장경로";
@@ -172,9 +173,10 @@
             // 
             // tb설정저장경로
             // 
-            this.tb설정저장경로.BackColor = System.Drawing.Color.DimGray;
+            this.tb설정저장경로.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.tb설정저장경로.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb설정저장경로.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb설정저장경로.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tb설정저장경로.Location = new System.Drawing.Point(244, 1);
             this.tb설정저장경로.Margin = new System.Windows.Forms.Padding(0);
             this.tb설정저장경로.Name = "tb설정저장경로";
@@ -184,9 +186,10 @@
             // 
             // tb이미지저장경로
             // 
-            this.tb이미지저장경로.BackColor = System.Drawing.Color.DimGray;
+            this.tb이미지저장경로.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.tb이미지저장경로.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb이미지저장경로.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb이미지저장경로.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tb이미지저장경로.Location = new System.Drawing.Point(244, 91);
             this.tb이미지저장경로.Margin = new System.Windows.Forms.Padding(0);
             this.tb이미지저장경로.Name = "tb이미지저장경로";

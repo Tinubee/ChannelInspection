@@ -54,7 +54,7 @@ namespace channelInspection.Schemas
                 //모듈 콜백 Disable
                 VmSolution.Instance.DisableModulesCallback();
                 //데이터 새롭게 추가
-                foreach (Flow구분 구분 in Enum.GetValues(typeof(Flow구분))) base.Add(new 비전마스터플로우(구분, "0"));
+                foreach (Flow구분 구분 in Enum.GetValues(typeof(Flow구분))) base.Add(new 비전마스터플로우(구분));
 
                 return true;
             }
@@ -98,7 +98,7 @@ namespace channelInspection.Schemas
         public GraphicsSetModuleTool graphicsSetModuleTool;
         public ShellModuleTool shellModuleTool;
 
-        public 비전마스터플로우(Flow구분 구분, String plcAddress)
+        public 비전마스터플로우(Flow구분 구분)
         {
             this.구분 = 구분;
             this.Init();
@@ -146,10 +146,7 @@ namespace channelInspection.Schemas
                     String resultString = this.shellModuleTool == null ? "NG" : ((ImvsSdkDefine.IMVS_MODULE_STRING_VALUE_EX[])this.shellModuleTool.Outputs[6].Value)[0].strValue;
                     this.결과 = resultString == "OK" ? true : false;
                 }
-
-
                 //PLC에 검사결과 전송부분 추가해야됨.
-
                 return true;
             }
             catch (Exception ex)
