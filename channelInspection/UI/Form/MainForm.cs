@@ -14,9 +14,12 @@ namespace channelInspection.UI.Form
 {
     public partial class MainForm : System.Windows.Forms.Form
     {
+
+        public WaitForm WaitForm;
         public MainForm()
         {
             InitializeComponent();
+            this.ShowWaitForm();
             Global.MainForm = this;
             this.Shown += MainForm_Shown;
             this.FormClosing += MainForm_FormClosing;
@@ -60,7 +63,7 @@ namespace channelInspection.UI.Form
         {
             Global.Initialized -= GlobalInitialized;
             if (!e) { this.Close(); return; }
-            //this.HideWaitForm();
+            this.HideWaitForm();
             Common.SetForegroundWindow(this.Handle.ToInt32());
 
             if (this.Init())
@@ -72,6 +75,16 @@ namespace channelInspection.UI.Form
                 //login.Show();
             }
             else this.Close();
+        }
+
+        public void ShowWaitForm()
+        {
+            WaitForm = new WaitForm() { StartPosition = FormStartPosition.CenterScreen };
+            WaitForm.Show(this);
+        }
+        public void HideWaitForm()
+        {
+            WaitForm.Close();
         }
     }
 }

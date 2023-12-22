@@ -401,8 +401,8 @@ namespace channelInspection.Schemas
 
         public override Boolean Close()
         {
-            this.Camera.Close();
-            this.Camera.Dispose();
+            this.Camera?.Close();
+            this.Camera?.Dispose();
             return true;
         }
 

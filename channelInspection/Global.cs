@@ -54,7 +54,7 @@ namespace channelInspection
                 //신호제어 = new 신호제어();
                 조명제어 = new 조명제어();
 
-                //그랩제어.Init();
+                그랩제어.Init();
                 환경설정.Init();
                 모델자료.Init();
                 비전도구.Init();
