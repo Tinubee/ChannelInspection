@@ -79,6 +79,7 @@ namespace channelInspection.Schemas
 
         public static NpgsqlConnection CreateDbConnection()
         {
+            //추후에 변경해야됨.
             NpgsqlConnectionStringBuilder b = new NpgsqlConnectionStringBuilder() { Host = "localhost", Port = 5432, Username = "postgres", Password = "ivmadmin", Database = "channel" };
             return new NpgsqlConnection(b.ConnectionString);
         }
@@ -114,11 +115,11 @@ namespace channelInspection.Schemas
 
         public Boolean Load()
         {
-            //if (!CanDbConnect())
-            //{
-            //    //Global.오류로그(로그영역.GetString(), "데이터베이스 연결실패", "데이터베이스에 연결할 수 없습니다.", true);
-            //    return false;
-            //}
+            if (!CanDbConnect())
+            {
+                //Global.오류로그(로그영역.GetString(), "데이터베이스 연결실패", "데이터베이스에 연결할 수 없습니다.", true);
+                return false;
+            }
 
             Common.DirectoryExists(Path.Combine(Application.StartupPath, @"Views"), true);
             if (!Common.DirectoryExists(기본경로, true))

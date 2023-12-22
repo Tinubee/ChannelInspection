@@ -43,7 +43,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.setVariables1 = new channelInspection.UI.Control.SetVariables();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.logViewer1 = new channelInspection.UI.Control.LogViewer();
+            this.e로그내역 = new channelInspection.UI.Control.LogViewer();
             this.state1 = new channelInspection.UI.Control.State();
             this.topBar1 = new channelInspection.UI.Control.TopBar();
             this.tableLayoutPanel1.SuspendLayout();
@@ -224,7 +224,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1906, 858);
+            this.tabPage5.Size = new System.Drawing.Size(1906, 862);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "도구설정";
             // 
@@ -235,28 +235,28 @@
             this.setVariables1.Location = new System.Drawing.Point(0, 0);
             this.setVariables1.Margin = new System.Windows.Forms.Padding(0);
             this.setVariables1.Name = "setVariables1";
-            this.setVariables1.Size = new System.Drawing.Size(1906, 858);
+            this.setVariables1.Size = new System.Drawing.Size(1906, 862);
             this.setVariables1.TabIndex = 0;
             // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage6.Controls.Add(this.logViewer1);
+            this.tabPage6.Controls.Add(this.e로그내역);
             this.tabPage6.Location = new System.Drawing.Point(4, 26);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1914, 888);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "로그";
             // 
-            // logViewer1
+            // e로그내역
             // 
-            this.logViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.logViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logViewer1.Location = new System.Drawing.Point(0, 0);
-            this.logViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.logViewer1.Name = "logViewer1";
-            this.logViewer1.Size = new System.Drawing.Size(1914, 888);
-            this.logViewer1.TabIndex = 0;
+            this.e로그내역.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.e로그내역.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.e로그내역.Location = new System.Drawing.Point(0, 0);
+            this.e로그내역.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.e로그내역.Name = "e로그내역";
+            this.e로그내역.Size = new System.Drawing.Size(1914, 888);
+            this.e로그내역.TabIndex = 0;
             // 
             // state1
             // 
@@ -327,6 +327,6 @@
         private Control.State state1;
         private Control.SetVariables setVariables1;
         private Control.CamViewers e결과뷰어;
-        private Control.LogViewer logViewer1;
+        private Control.LogViewer e로그내역;
     }
 }

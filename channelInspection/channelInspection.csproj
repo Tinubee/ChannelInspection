@@ -229,6 +229,7 @@
     <Compile Include="Schemas\모델정보.cs" />
     <Compile Include="Schemas\비전도구.cs" />
     <Compile Include="Schemas\신호제어.cs" />
+    <Compile Include="Schemas\유저정보.cs" />
     <Compile Include="Schemas\조명제어.cs" />
     <Compile Include="Schemas\환경설정.cs" />
     <Compile Include="Global.cs" />
@@ -414,6 +415,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon\SaveSetting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\loading.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
