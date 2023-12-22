@@ -26,12 +26,12 @@ namespace channelInspection.UI.Form
         }
         private Boolean Init()
         {
+            //뷰어들 추가되면 초기화 시켜주면됨.
             e환경설정.Init();
             e결과뷰어.Init();
             e로그내역.Init();
-            topBar1.Init();
-            state1.Init();
-            //뷰어들 추가되면 초기화 시켜주면됨.
+            e카메라상태뷰어.Init();
+            e프로그램상태뷰어.Init();
             return true;
         }
         private void MainForm_Shown(object sender, EventArgs e)

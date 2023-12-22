@@ -24,8 +24,8 @@ namespace channelInspection.UI.Control
             //this.BindLocalization.DataSource = 번역;
             //Localization.SetColumnCaption(this.GridView1, typeof(로그정보));
 
-            //e시작.DateTime = DateTime.Today;
-            //e종료.DateTime = DateTime.Today;
+            e시작.Value = DateTime.Today;
+            e종료.Value = DateTime.Today;
             //b검색.ImageOptions.SvgImage = Resources.GetSvgImage(SvgImageType.검색);
             //GridView1.Init();
             //GridControl1.DataSource = Global.로그자료;

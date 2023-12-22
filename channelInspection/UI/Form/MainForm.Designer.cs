@@ -44,8 +44,8 @@
             this.setVariables1 = new channelInspection.UI.Control.SetVariables();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.e로그내역 = new channelInspection.UI.Control.LogViewer();
-            this.state1 = new channelInspection.UI.Control.State();
-            this.topBar1 = new channelInspection.UI.Control.TopBar();
+            this.e프로그램상태뷰어 = new channelInspection.UI.Control.State();
+            this.e카메라상태뷰어 = new channelInspection.UI.Control.TopBar();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -63,7 +63,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.state1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.e프로그램상태뷰어, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 39);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -258,26 +258,26 @@
             this.e로그내역.Size = new System.Drawing.Size(1914, 888);
             this.e로그내역.TabIndex = 0;
             // 
-            // state1
+            // e프로그램상태뷰어
             // 
-            this.state1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.state1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.state1.Location = new System.Drawing.Point(1, 1);
-            this.state1.Margin = new System.Windows.Forms.Padding(0);
-            this.state1.Name = "state1";
-            this.state1.Size = new System.Drawing.Size(1922, 101);
-            this.state1.TabIndex = 1;
+            this.e프로그램상태뷰어.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.e프로그램상태뷰어.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.e프로그램상태뷰어.Location = new System.Drawing.Point(1, 1);
+            this.e프로그램상태뷰어.Margin = new System.Windows.Forms.Padding(0);
+            this.e프로그램상태뷰어.Name = "e프로그램상태뷰어";
+            this.e프로그램상태뷰어.Size = new System.Drawing.Size(1922, 101);
+            this.e프로그램상태뷰어.TabIndex = 1;
             // 
-            // topBar1
+            // e카메라상태뷰어
             // 
-            this.topBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.topBar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topBar1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.topBar1.Location = new System.Drawing.Point(0, 0);
-            this.topBar1.Margin = new System.Windows.Forms.Padding(0);
-            this.topBar1.Name = "topBar1";
-            this.topBar1.Size = new System.Drawing.Size(1924, 39);
-            this.topBar1.TabIndex = 0;
+            this.e카메라상태뷰어.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.e카메라상태뷰어.Dock = System.Windows.Forms.DockStyle.Top;
+            this.e카메라상태뷰어.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.e카메라상태뷰어.Location = new System.Drawing.Point(0, 0);
+            this.e카메라상태뷰어.Margin = new System.Windows.Forms.Padding(0);
+            this.e카메라상태뷰어.Name = "e카메라상태뷰어";
+            this.e카메라상태뷰어.Size = new System.Drawing.Size(1924, 39);
+            this.e카메라상태뷰어.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -286,7 +286,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.topBar1);
+            this.Controls.Add(this.e카메라상태뷰어);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -310,7 +310,7 @@
 
         #endregion
 
-        private Control.TopBar topBar1;
+        private Control.TopBar e카메라상태뷰어;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -324,7 +324,7 @@
         private System.Windows.Forms.Label label1;
         private Control.Config e환경설정;
         private Control.CamSetting camSetting1;
-        private Control.State state1;
+        private Control.State e프로그램상태뷰어;
         private Control.SetVariables setVariables1;
         private Control.CamViewers e결과뷰어;
         private Control.LogViewer e로그내역;

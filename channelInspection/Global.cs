@@ -57,12 +57,13 @@ namespace channelInspection
                 //신호제어 = new 신호제어();
                 조명제어 = new 조명제어();
 
+                환경설정.Init();
                 로그자료.Init();
                 그랩제어.Init();
-                환경설정.Init();
                 모델자료.Init();
                 비전도구.Init();
                 //신호제어.Init();
+                Global.정보로그(로그영역, "초기화", "시스템을 초기화 합니다.", false);
                 Initialized.Invoke(null, true);
                 return true;
             }
@@ -71,8 +72,6 @@ namespace channelInspection
                 MessageBox.Show(ex.Message);
                 Debug.WriteLine("시스템 초기화에 실패하였습니다.");
             }
-
-            Global.정보로그(로그영역, "초기화", "시스템을 초기화 합니다.", false);
             Initialized.Invoke(null, false);
             return false;
         }
@@ -83,7 +82,11 @@ namespace channelInspection
             {
                 그랩제어?.Close();
                 //조명제어?.Close();
+                모델자료?.Close();
+                비전도구?.Close();
                 환경설정?.Close();
+                //신호제어?.Close();
+                로그자료?.Close();
                 return true;
             }
             catch (Exception ex)
